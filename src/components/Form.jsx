@@ -1,11 +1,12 @@
 import React from 'react'
+import '../assets/Form.css';
 
 export default function Form({onSubmit}) {
   
     return (
-            <form onSubmit={onSubmit}>                      
-                <input type="text" name="city" placeholder="City" />
-                <button className="btn">Get weather</button>
+            <form className="example" onSubmit={onSubmit}>                      
+                <input  type="text" name="city" placeholder="City" />
+                <button>Get weather</button>
             </form>
         )
     }

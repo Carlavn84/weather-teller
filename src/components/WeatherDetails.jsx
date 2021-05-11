@@ -1,14 +1,15 @@
 import React from 'react'
 
-export default function WeatherDetails ({city,description, humidity, temperature}) {
+export default function WeatherDetails ({clouds, location, description, geo, humidity, temperature, temp_max, temp_min, wind}) {
    
         return (
             <div>
-            {/* Here is your weather's details:  */}
-                <p>Location: {city}</p>
-                <p>Temperature: {temperature}</p>
-                <p>Humidity: {humidity}</p>
-                <p>Condition: {description}</p>
+   
+                <p className="location">{location} <span className="description"><em>{description}</em></span></p>
+                <p className="temp">{temperature}&deg;C</p>
+                <p>temperature from {temp_min} to {temp_max}&deg;C, wind {wind}m/s, clouds {clouds}%</p>
+               
+                <p>Geo coords: <a href="https://www.latlong.net/Show-Latitude-Longitude.html">[{geo}]</a> </p>
             </div>
         )
     }

@@ -1,0 +1,110 @@
+/* .searchInput {
+    width: 450px;
+    height: 50%;
+    text-align: left;
+    border-radius: 25px;
+    border: none;
+    padding: 10px 10px;
+    margin: 50px 50px;
+    /* background-color: green; */
+
+
+/* .btnSearch {
+    height: 50%;
+    width: 100px;
+    border-radius: 25px;
+    border: none;
+
+} */
+
+/* input[type="text"] {
+    width: 200px;
+    height: 20px;
+    padding-right: 50px;
+}
+
+input[type="submit"] {
+    margin-left: -50px;
+    height: 20px;
+    width: 50px;
+} */
+
+/* form.searchForm input[type=text] {
+    width: 450px;
+    height: 50%;
+    text-align: left;
+    border-radius: 25px;
+    border: none;
+    padding: 10px 10px;
+    margin: 50px 50px;
+    float: left;
+    border-left: none;
+}
+ */
+
+/* form.searchForm button {
+    float: left;
+    width: 150px;
+    padding: 10px;
+    background-color: orange;
+    border: none;
+ 
+    color: white;
+  
+    border-left: none;
+    cursor: pointer;
+  }
+
+
+  form.searchForm button:hover {
+    background: #0b7dda;
+  }
+
+  form.searchForm::after {
+    content: "";
+    clear: both;
+    display: table;
+  } */
+
+  form.example input[type=text] {
+    padding: 10px;
+   
+    font-size: 15px;
+    border: none;
+    float: left;
+    width: 20%;
+    background: #f1f1f1;
+    border-radius: 25px 0px 0px 25px;
+
+    
+  }
+  
+  /* Style the submit button */
+  form.example button {
+    float: left;
+    width: 7%;
+    padding: 10px;
+    background:#e96e50;
+        color: white;
+    font-size: 15px;
+    
+    border-left: none; /* Prevent double borders */
+    cursor: pointer;
+    border-radius: 0px 25px 25px 0px;
+    border: none;
+   
+  }
+  
+  form.example button:hover {
+    background: #0b7dda;
+  }
+
+  /* Clear floats */
+  form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+ 
+
