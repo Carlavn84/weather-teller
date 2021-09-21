@@ -5,8 +5,7 @@ export default function Form({onSubmit}) {
   
     return (
             <form className="example" onSubmit={onSubmit}>                      
-                <input  type="text" name="city" placeholder="City" />
-                <button>Get weather</button>
+                <input  type="text" name="city" placeholder="City" />           
             </form>
         )
     }
