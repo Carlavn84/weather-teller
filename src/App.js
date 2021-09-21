@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import axios from 'axios';
 
 import './App.css';
-
 import Form from "./components/Form.jsx";
 import WeatherDetails from "./components/WeatherDetails.jsx";
 
@@ -30,15 +29,12 @@ function App() {
 
     const city = e.target.elements.city.value;
 
-
- 
     axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_Key}&units=metric`)
     .then((res) => {
       console.log(res);
       setWeather({
           city: res.data.name,
-          country: res.data.sys.country,        
-        
+          country: res.data.sys.country,       
           description: res.data.weather[0].description,
           humidity: res.data.main.humidity,
           temperature: res.data.main.temp,
@@ -62,39 +58,29 @@ function App() {
   }
    
   return (
-    <div className="main">
     <div className="container">
-    <h1 className="header">Weather Today</h1>
-      <div className="searchContainer">
-        <Form onSubmit={getWeatherInfo}/> 
-      </div>
-    </div>
-     
-      
-
-      {weather.errorMessage && 
-      <h3 className="error">Not found. Try another city
-      </h3>}
-<div className="result">
-{weather.city === null ? null :
-      <WeatherDetails
-        location=  {weather.city +  ',' + ' ' + weather.country}
-        description= {weather.description}
-        humidity= {weather.humidity}
-        temp_max = {weather.temp_max}
-        temp_min = {weather.temp_min}
-        temperature= {weather.temperature}
-        geo={weather.geo_lon + ' - ' + weather.geo_lat}
-        wind={weather.wind}
+        <div className="nav">
+        <h1 className="header">Weather Today</h1>    
+            <Form onSubmit={getWeatherInfo}/>       
+        </div> 
         
-      />      
-     }  
-     
-</div>
-   
-      
-       
-    </div>
+        {/* {weather.errorMessage && 
+        <h3 className="error">Not found. Try another city
+        </h3>} */}
+    
+      {weather.city === null ? null :
+        <WeatherDetails
+          location=  {weather.city +  ',' + ' ' + weather.country}
+          description= {weather.description}
+          humidity= {weather.humidity}
+          temp_max = {weather.temp_max}
+          temp_min = {weather.temp_min}
+          temperature= {weather.temperature}
+          geo={weather.geo_lon + ' - ' + weather.geo_lat}
+          wind={weather.wind}        
+        />      
+      }      
+    </div>  
   );
 }
 

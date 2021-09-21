@@ -4,7 +4,7 @@ import '../assets/Form.css';
 export default function Form({onSubmit}) {
   
     return (
-            <form className="example" onSubmit={onSubmit}>                      
+            <form className="search-box" onSubmit={onSubmit}  autocomplete="off">                      
                 <input  type="text" name="city" placeholder="City" />           
             </form>
         )
